@@ -16,7 +16,7 @@
     let drama = [];
     let romance = [];
 
-    for (let contador = 1; contador < contagem; contador++) {
+    for (let contador = 1; contador <= contagem; contador++) {
         const filme = prompt(`Qual o filme?`).trim();
         const genero = prompt(`Qual o genero deste filme?`).trim();
         if (genero === "Comédia") comedia.push(filme);
@@ -25,9 +25,9 @@
     }
     
     //SAÍDA
-    if (comedia.length == -1) document.write(`Os filmes de drama foram ${drama.join(", ")}. Os filmes de romance foram ${romance.join(", ")}`)
-    else if (drama.length == -1) document.write(`Os filmes de comédia foram ${comedia.join(", ")}. Os filmes de romance foram ${romance.join(", ")}`)
-    else if (romance.length == -1) document.write(`Os filmes de comédia foram ${comedia.join(", ")}. Os filmes de drama foram ${drama.join(", ")}.`)
+    if (comedia.length == 0) document.write(`Os filmes de drama foram ${drama.join(", ")}. Os filmes de romance foram ${romance.join(", ")}`)
+    else if (drama.length == 0) document.write(`Os filmes de comédia foram ${comedia.join(", ")}. Os filmes de romance foram ${romance.join(", ")}`)
+    else if (romance.length == 0) document.write(`Os filmes de comédia foram ${comedia.join(", ")}. Os filmes de drama foram ${drama.join(", ")}.`)
     else document.write(`Os filmes de comédia foram ${comedia.join(", ")}. Os filmes de drama foram ${drama.join(", ")}. Os filmes de romance foram ${romance.join(", ")}`);
     
 </script>
