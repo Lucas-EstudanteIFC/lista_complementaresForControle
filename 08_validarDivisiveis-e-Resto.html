@@ -6,14 +6,16 @@
 
     //ENTRADA
 
-
-    //ENTRADA
-
-    
+    let lista = [];
     //PROCESSAMENTO
-    
-    
+    for (let contador = 1000; contador <= 1999; contador++) {
+        if (contador % 11 == 5) {
+            lista.push(contador);
+
+        }
+    }
+
     //SAÍDA
-    
+    document.write(lista.join(", "));
 
 </script>

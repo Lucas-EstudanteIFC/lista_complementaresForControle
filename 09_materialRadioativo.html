@@ -7,12 +7,15 @@
     */
 
     //ENTRADA
-
-    
+    const massaInicial = parseFloat(prompt(`Qual a massa inicial?`).trim().replace(",", "."));
+    let massa = massaInicial;
     //PROCESSAMENTO
-    
-    
+    let contador
+    for (contador = 0; massa < 1; contador++) {
+        massa = massaInicial / 2;
+    }
+
     //SAÍDA
-    
+    document.write(`Irá demorar ${contador/60} horas e ${contador} minutos.`)
 
 </script>

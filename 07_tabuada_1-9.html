@@ -6,11 +6,17 @@
 
     //ENTRADA
 
+    let multiplicadores = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     
-    //PROCESSAMENTO
-    
-    
+    //PROCESSAMENTO 
+    let listaFinal = [];
+    for (let contador = 1; contador <= 9; contador++) {
+        for (const multiplicador of multiplicadores) {
+            let resultado = contador * multiplicador;
+            listaFinal.push(resultado)
+        }
+    }
     //SAÍDA
-    
+    document.write(listaFinal.join(", "));
 
 </script>

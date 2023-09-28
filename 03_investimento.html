@@ -8,11 +8,21 @@
     */
 
     //ENTRADA
+    let valorInicial = 100
+    let invest = 0
+    let invest2 = 0
+    let invest3 = 0
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let contador = 1; contador <= 24; contador++) {
+        invest = valorInicial * 1.018;
+    }
+    for (let contador = 24; contador <= 48; contador++) {
+        invest2 = invest * 1.018;
+    }
+    for (let contador = 48; contador < 98; contador++) {
+        invest3 = invest2 * 1.018;
+    }
     //SAÍDA
-    
+    document.write(`O valor após 24 meses é R$${invest.toFixed(2).replace(".", ",")}. \n O valor após 48 meses é R$${invest2.toFixed(2).replace(".", ",")}. \n O valor após 98 meses é R$${invest3.toFixed(2).replace(".", ",")}.`)
 </script>

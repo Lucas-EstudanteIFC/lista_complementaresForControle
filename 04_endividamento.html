@@ -7,12 +7,14 @@
     */
 
     //ENTRADA
-
-    
+    let banco = 10000
+    let contador = 0
     //PROCESSAMENTO
-    
-    
+    for (contador = 1; banco >= 0; contador++) {
+        banco = (banco - 300) * 1.03;
+    }
+    let ano = contador / 12
     //SAÍDA
-    
+    document.write(`Ele terá gasto tudo em ${contador} meses ou ${ano.toFixed(0)} anos.`);
 
 </script>
