@@ -6,15 +6,21 @@
     */
 
     //ENTRADA
-
-
-    //ENTRADA
-
     
+
     //PROCESSAMENTO
-    
+    let pares = [];
+    let impares = [];
+    let contador = 0
+    for (contador = 1; contador <= 100; contador++) {
+        if (contador % 2 ===0) {
+            pares.push(contador)
+        } else {
+            impares.push(contador)
+        }
+        
+    }
     
     //SAÍDA
-    
-
+    document.write(`Soma de todos os pares: ${pares.reduce((acumulador, elemento) => acumulador + elemento, 0)}. <br> Soma de todos os impares: ${impares.reduce((acumulador, elemento) => acumulador + elemento, 0)}.`)
 </script>

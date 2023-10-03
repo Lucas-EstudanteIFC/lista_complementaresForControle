@@ -8,12 +8,16 @@
     */
 
     //ENTRADA
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    const contagem = parseInt(prompt(`Quantos números deseja adicionar?`).trim());
 
-    
     //PROCESSAMENTO
-    
+    for (let contador = 0; contador < contagem; contador++) {
+        let num = parseFloat(prompt(`Informe um número.`).trim().replace(",", "."));
+        fibonacci.push(num);
+    };
     
     //SAÍDA
-    
+    document.write(fibonacci.sort((a, b) => a - b).join(" - "));
 
 </script>

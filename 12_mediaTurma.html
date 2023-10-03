@@ -8,12 +8,21 @@
     */
 
     //ENTRADA
+    let notasProgramacaoI = [4, 3, 5, 10, 9, 2, 7, 10, 8, 7, 6, 1, 5, 2, 3];
+    let maior = [];
+    let menor = [];
 
-    
     //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
+    for (const nota of notasProgramacaoI) {
+        if (nota == 1) {
+            menor.push(nota);
+        }
+        else if (nota == 10) {
+            maior.push(nota);
+        }
+    }
 
+    let media = notasProgramacaoI.reduce((a, b) => a + b, 0) / notasProgramacaoI.length;
+    //SAÍDA
+    document.write(`A maior média foi ${maior.join(" e ")} e a menor nota foi ${menor}. A média da turma foi ${media.toFixed(2).replace(".", ",")}`);
 </script>
