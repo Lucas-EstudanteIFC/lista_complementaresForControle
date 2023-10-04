@@ -13,11 +13,10 @@
 
     //PROCESSAMENTO
     for (let contador = 0; contador < contagem; contador++) {
-        let num = parseFloat(prompt(`Informe um número.`).trim().replace(",", "."));
-        fibonacci.push(num);
+        fibonacci.push([fibonacci.length - 1] + [fibonacci.length - 2]);
     };
-    
+
     //SAÍDA
-    document.write(fibonacci.sort((a, b) => a - b).join(" - "));
+    document.write(fibonacci);
 
 </script>

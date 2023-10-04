@@ -8,12 +8,18 @@
     */
 
     //ENTRADA
+    const contagem = parseInt(prompt(`Informe quantos números primos deseja.`).trim());
 
-    
     //PROCESSAMENTO
-    
-    
+    let divisivel = 0;
+    let listaNumP = [];
+    for (let contador = 1; contador <= contagem; contador++) {
+        let num = parseInt(prompt(`Quais estes números?`).trim());
+        listaNumP.push(num);
+    };
+
+
     //SAÍDA
-    
+    document.write(listaNumP);
 
 </script>

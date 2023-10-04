@@ -13,12 +13,22 @@
     */
 
     //ENTRADA
-
+    const base = parseFloat(prompt(`Qual é a base da tabuada?`).trim().replace(",", "."));
+    const inicio = parseInt(prompt(`Qual o início da tabuada?`).trim());
+    const final = parseInt(prompt(`Qual o fim da tabuada?`).trim());
     
     //PROCESSAMENTO
-    
-    
+    let listaMultiplicadores = [];
+    let listaResultado = [];
+    for (let contador = inicio; contador <= final; contador++) {
+        listaMultiplicadores.push(contador);
+        
+    }
+    for (const multiplicador of listaMultiplicadores) {
+        let resultado = base * multiplicador;
+        listaResultado.push(resultado)
+    }
     //SAÍDA
-    
+    document.write(listaResultado.join("<br>"));
 
 </script>
