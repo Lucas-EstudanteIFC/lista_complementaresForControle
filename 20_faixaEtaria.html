@@ -14,53 +14,58 @@
     */
 
     //ENTRADA
-    let info
+    let info;
+    let listaIdade = [];
     for (let contador = 1; contador <= 10; contador++) {
         info = parseInt(prompt(`Qual a sua idade:?`).trim());
+        listaIdade.push(info)
     }
-    let listaIdade = [];
-    listaIdade.push(info);
-    let mensagemFinal = `A quantidade de pessoas na faixa dos `
+
     //PROCESSAMENTO
-    let faixaE1;
-    let faixaE2;
-    let faixaE3;
-    let faixaE4;
-    let faixaE5;
+    let faixaE1 = 0;
+    let faixaE2 = 0;
+    let faixaE3 = 0;
+    let faixaE4 = 0;
+    let faixaE5 = 0;
 
     for (const idade of listaIdade) {
         if (idade <= 15) {
             faixaE1++
-            if (faixaE1 > 0) {
-                mensagemFinal += `15 anos são ${faixaE1}; `
-            }
+
         }
         else if (idade <= 30) {
             faixaE2++
-            if (faixaE2 > 0) {
-                mensagemFinal += `na faixa dos 16 aos 30 são ${faixaE2}; `
-            }
+
         }
         else if (idade <= 45) {
             faixaE3++
-            if (faixaE3 > 0) {
-                mensagemFinal += `na faixa dos 31 aos 45 são ${faixaE3}; `
-            }
+
         }
         else if (idade <= 60) {
             faixaE4++
-            if (faixaE4 > 0) {
-                mensagemFinal += `na faixa dos 46 aos 60 são ${faixaE4}; `
-            }
+
         }
         else {
             faixaE5++
-            if (faixaE5 > 0) {
-                mensagemFinal += `na faixa acima dos 61 são ${faixaE5}.`
-            };
+
         }
     }
     //SAÍDA
-    document.write(mensagemFinal);
-
+    let mensagemFinal = `A quantidade de pessoas `
+    if (faixaE1 > 0) {
+        mensagemFinal += `na faixa dos 15 anos são ${faixaE1}, `;
+    }
+    if (faixaE2 > 0) {
+        mensagemFinal += `na faixa dos 16 aos 30 são ${faixaE2}, `;
+    }
+    if (faixaE3 > 0) {
+        mensagemFinal += `na faixa dos 31 aos 45 são ${faixaE3}, `;
+    }
+    if (faixaE4 > 0) {
+        mensagemFinal += `na faixa dos 46 aos 60 são ${faixaE4}, `;
+    }
+    if (faixaE5 > 0) {
+        mensagemFinal += `na faixa acima dos 61 são ${faixaE5}.`;
+    };
+    document.write(mensagemFinal)
 </script>

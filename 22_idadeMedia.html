@@ -9,12 +9,28 @@
     */
 
     //ENTRADA
+    let listaIdadeM = [];
+    let listaIdadeF = [];
+    let infoIdade;
+    for (let contador = 1; contador <= 10; contador++) {
+        let infoSex = prompt(`Qual o seu gênero? M-Masculino | F-Feminino | O-Outro`).toUpperCase().trim();
 
-    
+        if (infoSex == "M") {
+            infoIdade = parseInt(prompt(`Qual a sua idade?`).trim());
+            listaIdadeM.push(infoIdade)
+        }
+        else {
+            infoIdade = parseInt(prompt(`Qual a sua idade?`).trim());
+            listaIdadeF.push(infoIdade);
+        };
+    };
+
     //PROCESSAMENTO
-    
+    let mediaMasc = listaIdadeM.reduce((a, b) => a + b, 0) / listaIdadeM.length;
+    let mediaFem = listaIdadeF.reduce((a, b) => a + b, 0) / listaIdadeF.length;
+    let media = (mediaFem + mediaMasc) / 2;
     
     //SAÍDA
-    
+    document.write(`A média das 10 pessoas é de ${media.toFixed(2).replace(".", ",")}, sendo a média dos homens ${mediaMasc.toFixed(2).replace(".", ",")} e a média feminina ${mediaFem.toFixed(2).replace(".", ",")}.`);
 
 </script>
