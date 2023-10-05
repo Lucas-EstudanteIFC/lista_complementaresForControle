@@ -12,12 +12,27 @@
 
     //PROCESSAMENTO
     let divisivel = 0;
+    let listaNum = [];
     let listaNumP = [];
+
     for (let contador = 1; contador <= contagem; contador++) {
         let num = parseInt(prompt(`Quais estes números?`).trim());
-        listaNumP.push(num);
-    };
+        listaNum.push(num)
 
+
+    };
+    for (const numero of listaNum) {
+        for (let contador = 1; contador <= numero; contador++) {
+            if (numero % contador == 0) {
+                divisivel++;
+            };
+
+        }
+        if (divisivel == 2) {
+            listaNumP.push(numero);
+        }
+
+    }
 
     //SAÍDA
     document.write(listaNumP);
