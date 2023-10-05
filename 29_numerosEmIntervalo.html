@@ -6,12 +6,21 @@
     */
 
     //ENTRADA
-
+    let listaDeNumeros = []
+    for (let contador = 1; contador <= 10; contador++) {
+        const num = parseFloat(prompt(`Informe um número.`).trim().replace(",", "."));
+        listaDeNumeros.push(num);
+    }
     
     //PROCESSAMENTO
-    
+    let listaIntervalo = []
+    for (const numero of listaDeNumeros) {
+        if (numero >= 100 && numero <= 200) {
+            listaIntervalo.push(numero);
+        }
+    }
     
     //SAÍDA
-    
+    document.write(`A porcentagem de números dentro do intervalo é de ${(listaIntervalo.length * 100 ) / listaDeNumeros.length}%, tendo ${listaIntervalo.length} números dentro do intervalo no total.`);
 
 </script>

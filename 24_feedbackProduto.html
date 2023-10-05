@@ -11,16 +11,49 @@
     */
 
     //ENTRADA
-
-
-    //PROCESSAMENTO
-    //ENTRADA
-
+    let sim = [];
+    let nao = [];
+    for (let contador = 1; contador <= 10; contador++) {
+        const genero = prompt(`Informe o seu gênero. \n M-Masculino | F-Feminino`).trim().toUpperCase();
+        if (genero === "M") {
+            const confirmacao = prompt(`O produto atendeu suas expectativas? \n S-Sim | N-Não`).trim().toUpperCase();
+            if (confirmacao === "S") {
+                sim.push(genero);
+            }
+            else {
+                nao.push(genero);
+            }
+        }    
+        else if (genero === "F") {
+            const confirmacao = prompt(`O produto atendeu suas expectativas? \n S-Sim | N-Não`).trim().toUpperCase();
+            if (confirmacao === "S") {
+                sim.push(genero);
+            }
+            else {
+                nao.push(genero);
+            }
+        }
+        else {
+            alert(`Valor inválido`);
+        };
+    };
     
     //PROCESSAMENTO
-    
-    
+    let mulheresSim = 0;
+    let homensNao = 0
+
+    for (const mulher of sim) {
+        if (mulher === "F") {
+            mulheresSim++;
+        }
+    }
+
+    for (const homem of nao) {
+        if (homem === "M") {
+            homensNao++;
+        }
+    }
     //SAÍDA
-    
+    document.write(`A quantidade de pessoas que disseram "sim" foi ${sim.length}. A quantidade de pessoas que disseram "não" foi ${nao.length}. A quantidade de mulheres que disseram "sim" foi de ${mulheresSim}. O percentual de homens que disseram "não" foi de ${(homensNao*100) / nao.length}%.`);
 
 </script>

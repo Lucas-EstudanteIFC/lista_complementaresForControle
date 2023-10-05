@@ -9,10 +9,10 @@
 
     //ENTRADA
     const pessoas = parseInt(prompt(`Quantas pessoas terão sua altura medida?`).trim());
+
+    //PROCESSAMENTO 
     let lista = []
-    //PROCESSAMENTO
-    let contador
-    for (contador = 0; contador < pessoas; contador++) {
+    for (let contador = 0; contador < pessoas; contador++) {
         const altura = parseFloat(prompt(`Informe sua altura`).trim().replace(",", "."));
         if (altura > 3) {
             document.write(`Valor inválido`);
@@ -23,6 +23,6 @@
     }
 
     //SAÍDA
-    document.write(`A menor altura é ${lista.sort((a, b) => a - b).slice(0, lista.length - (pessoas -1 ))}. <br> A maior altura é ${lista.sort((a, b) => b - a).slice(0, lista.length - (pessoas - 1))}.`);
+    document.write(`A menor altura é ${lista.sort((a, b) => a - b).slice(0, lista.length - (pessoas - 1))}. <br> A maior altura é ${lista.sort((a, b) => b - a).slice(0, lista.length - (pessoas - 1))}.`);
 
 </script>

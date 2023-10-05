@@ -11,12 +11,19 @@
     */
 
     //ENTRADA
+    const limiteInferior = parseInt(prompt(`Informe um limite inferior.`).trim());
+    const limiteSuperior = parseInt(prompt(`Informe um limite superior.`).trim());
 
-    
     //PROCESSAMENTO
-    
-    
+    let pares = [];
+    for (let contador = limiteInferior; contador <= limiteSuperior; contador++) {
+        if (contador % 2 == 0) {
+            pares.push(contador);
+        }
+
+    }
+
     //SAÍDA
-    
+    document.write(`Os números pares dentro do intervalo são ${pares.join(", ")}. A soma destes números é ${pares.reduce((a, b) => a + b, 0)}.`);
 
 </script>

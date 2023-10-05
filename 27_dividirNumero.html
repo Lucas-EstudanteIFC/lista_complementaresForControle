@@ -6,12 +6,22 @@
     */
 
     //ENTRADA
+    let contagem = 0;
+    let num = 0
 
-    
     //PROCESSAMENTO
-    
+    for (let contador = 1000; contador  < 1500; contador++) {
+        if(contador % 11 == 5) {
+            contagem++;
+        }
+        if (contagem == 5) {
+            num = contador;
+            contador = 1600;
+        }
+        
+    }
     
     //SAÍDA
-    
+    document.write(num)
 
 </script>
