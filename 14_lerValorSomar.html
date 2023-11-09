@@ -7,12 +7,16 @@
     */
 
     //ENTRADA
+    const n = parseInt(prompt(`Informe um núemro positivo e inteiro qualquer.`).trim());
+    let S = [];
 
-    
     //PROCESSAMENTO
-    
-    
+    for (let contador = 1; contador <= n; contador++) {
+        let conta = 1/contador;
+        S.push(conta);
+    }
+    S = S.reduce((a, b) => a + b, 0);
     //SAÍDA
-    
+    document.write(`O valor final é de ${S}`);
 
 </script>

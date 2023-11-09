@@ -15,11 +15,45 @@
     */
 
     //ENTRADA
-    
-    
+    let listaProdutos = ["Tomate", "Batata", "Batata-Doce", "Alface", "Cebola", "Cebolinha", "Beterraba"];
+    let listaDeVendas = [];
+    let vendas = 0;
+    for (const produto of listaProdutos) {
+        const quantidade = parseInt(prompt(`Informe a quantidade de itens que comprou deste produto: ${produto}`));
+        if (produto == "Tomate") {
+            vendas = quantidade * 3.90;
+            listaDeVendas.push(vendas);
+        }
+        if (produto == "Batata") {
+            vendas = quantidade * 3.40;
+            listaDeVendas.push(vendas);
+        }
+        if (produto == "Batata-Doce") {
+            vendas = quantidade * 4.70;
+            listaDeVendas.push(vendas);
+        }
+        if (produto == "Alface") {
+            vendas = quantidade * 1.50;
+            listaDeVendas.push(vendas);
+        }
+        if (produto == "Cebola") {
+            vendas = quantidade * 2.90;
+            listaDeVendas.push(vendas);
+        }
+        if (produto == "Cebolinha") {
+            vendas = quantidade * 1.40;
+            listaDeVendas.push(vendas);
+        }
+        if (produto == "Beterraba") {
+            vendas = quantidade * 4.10;
+            listaDeVendas.push(vendas);
+        }
+        
+    }
+
     //PROCESSAMENTO
-    
+    let lucroTotal = listaDeVendas.reduce((a, b) => a + b, 0);
     
     //SAÍDA
-    
+    document.write(`O lucro total foi de ${(lucroTotal).toFixed(2).replace(".", ",")}R$.`);
 </script>

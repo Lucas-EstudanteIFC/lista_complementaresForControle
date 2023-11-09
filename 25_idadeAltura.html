@@ -9,12 +9,33 @@
     */
 
     //ENTRADA
+    let pessoasMais50 = [];
+    let pessoasMenos25 = [];
+    let mediaMais50 = 0;
+    let mediaMenos25 = 0;
+    let pesoTotal = [];
+    let mediaPeso = 0;
 
+    for (let contador = 1; contador <= 10; contador++) {
+        const idade = parseInt(prompt(`Informe o sua idade.`).trim());
+        const peso = parseFloat(prompt(`Informe o seu peso.`).trim().replace(",", "."));
+        if (idade >= 50) {
+            pessoasMais50++;
+            mediaMais50 = pessoasMais50/10;
+
+        }
+        else {
+            pessoasMenos25++;
+            mediaMenos25 = pessoasMenos25/10;
+        }
+        pesoTotal.push(peso);
+        mediaPeso = pesoTotal.reduce((a, b) => a + b, 0) / pesoTotal.length;
+    }
     
     //PROCESSAMENTO
     
     
     //SAÍDA
-    
+    document.write(`A média de pessoas acima de 50 anos foi de ${mediaMais50.toFixed(1).replace(".", ",")}%. <br> A média de pessoas abaixo dos 25 anos foi de ${mediaMenos25.toFixed(1).replace(".", ",")}%. <br> O peso médio foi de ${mediaPeso.toFixed(1).replace(".", ",")}`);
 
 </script>
