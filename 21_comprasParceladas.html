@@ -13,17 +13,26 @@
     //ENTRADA
     let transacoesV = [];
     let transacoesP = [];
-    
+    let valor = "";
     for (let contador = 1; contador <= 10; contador++) {
         const tipoTransacao = prompt(`Qual o tipo de transação que realizaste? V-à vista | P-parceladas`).trim().toUpperCase();
         if (tipoTransacao == "V") {
-            
+            valor = parseFloat(prompt(`Qual o valor da transação à vista?`).trim().replace(",", "."));
+            transacoesV.push(valor);   
+        }
+        else if (tipoTransacao == "P") {
+            valor = parseFloat(prompt(`Qual o valor da transação parcelada?`).trim().replace(",", "."));
+            transacoesP.push(valor);
+        }
+        else {
+            alert(`Valor inválido`);
         }
     }
-    //PROCESSAMENTO
     
+    //PROCESSAMENTO
+    let primeiraTrasancaoP = transacoesP[0] * 3;
     
     //SAÍDA
-    
+    document.write(`No total houveram: <br> ${transacoesV.length} transação(ões) à vista. <br> ${transacoesP.length} transação(ões) parceladas. <br> ${transacoesP.length + transacoesV.length} transações totais. <br> O valor da primeira transação parcelada ficará por ${primeiraTrasancaoP.toFixed(2).replace(".", ",")}`);
 
 </script>

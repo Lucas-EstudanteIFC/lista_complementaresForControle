@@ -9,12 +9,20 @@
     */
 
     //ENTRADA
-
+    const valorInvestimento = parseFloat(prompt(`Qual o valor que você deseja investir?`).trim().replace(",", "."));
     
     //PROCESSAMENTO
-    
+    let poupança = 0;
+    let poupançaPlus = 0;
+    let FundosRF = 0;
+
+    for (let contador = 1; contador <= 36; contador++) {
+        poupança = valorInvestimento * 1.015;
+        poupançaPlus = valorInvestimento * 1.02;
+        FundosRF = valorInvestimento * 1.04;
+    }
     
     //SAÍDA
-    
+    document.write(`O valor da poupança ficará em R$${poupança.toFixed(2).replace(".", ",")}. <br> O valor da poupança plus ficará em R$${poupançaPlus.toFixed(2).replace(".", ",")}. <br> O valor dos fundos de renda fixa ficarão em R$${FundosRF.toFixed(2).replace(".", ",")}.`)
 
 </script>
